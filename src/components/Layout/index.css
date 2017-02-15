@@ -1,0 +1,12 @@
+
+.hello {
+  background: none;
+
+  .hello2 {
+    background: yellow;
+  }
+}
+
+body {
+  font-size: 12px;
+}

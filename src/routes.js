@@ -1,7 +1,7 @@
 import React from 'react';
-import {Route} from 'react-router';
-import {App} from './components/app';
+import { Route } from 'react-router';
+import { App } from './components/app';
 
 export const routes = (
-  <Route path="/" component={App} />
+  <Route path="/" component={App}/>
 );

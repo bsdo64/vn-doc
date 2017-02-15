@@ -16,9 +16,9 @@ app.get('*', function(req, res) {
 });
 
 
-app.listen(80, err => {
+app.listen(3001, err => {
   if (err)
     console.log(chalk.red(err));
   else
-    open('http://localhost');
+    open('http://localhost:3001');
 });

@@ -1,5 +1,3 @@
-import './app.scss';
-
 import React from 'react';
 import Helmet from 'react-helmet';
 
@@ -8,7 +6,7 @@ import {bindActionCreators} from 'redux';
 
 import {displayMessage} from '../actions';
 
-import Contents from './Contents';
+import Layout from './Layout';
 
 export class _App extends React.Component {
 
@@ -32,7 +30,7 @@ export class _App extends React.Component {
           ]}
           link={[{rel: "icon", href: require('../../assets/img/favicon.png'), type: 'image/png', sizes: '32x32' }]} />
 
-        <Contents {...this.props} />
+        <Layout {...this.props} />
       </div>
     );
   }
