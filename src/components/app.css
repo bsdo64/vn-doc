@@ -1,0 +1,12 @@
+:global #root {
+  height: 100%;
+}
+
+:global body {
+  font-size: 12px;
+  height: inherit;
+}
+
+.app {
+  height: 100%;
+}

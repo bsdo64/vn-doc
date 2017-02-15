@@ -1,4 +1,4 @@
-export const routes = {
+exports.routes = {
   childRoutes: [ {
     path: '/',
     component: require('./components/app').App,

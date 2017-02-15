@@ -7,6 +7,7 @@ import {bindActionCreators} from 'redux';
 import {displayMessage} from '../actions';
 
 import Layout from './Layout';
+import style from './app.css';
 
 export class _App extends React.Component {
 
@@ -18,7 +19,7 @@ export class _App extends React.Component {
 
   render = () => {
     return (
-      <div className="main-app">
+      <div className={style.app}>
         <Helmet
           title="React Starter!"
           htmlAttributes={{lang: "en"}}
