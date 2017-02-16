@@ -1,7 +1,9 @@
+import { App } from './components/app';
+
 export const routes = {
   childRoutes: [ {
     path: '/',
-    component: require('./components/app').App,
+    component: App,
     // childRoutes: [
     //   require('./routes/Calendar'),
     //   require('./routes/Course'),

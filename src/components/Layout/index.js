@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-const style = require('./index.css');
+import style from './index.css';
 
 class Layout extends Component {
 

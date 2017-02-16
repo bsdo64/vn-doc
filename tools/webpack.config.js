@@ -83,9 +83,11 @@ module.exports = ({isDev}) => {
           include: [
             path.resolve(__dirname, '../assets')
           ],
-          loader: 'url-loader',
-          options: {
-            limit: 4096,
+          use: {
+            loader: 'url-loader',
+            options: {
+              limit: 4096,
+            }
           }
         },
         {

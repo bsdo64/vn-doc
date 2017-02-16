@@ -24,8 +24,8 @@ const content = (
   </Provider>
 );
 const renderRoot = () => ReactDOM.render(
-    <HotReloader>{content}</HotReloader>,
-    document.getElementById('root')
+  <HotReloader>{content}</HotReloader>,
+  document.getElementById('root')
 );
 renderRoot();
 
