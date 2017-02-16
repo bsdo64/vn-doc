@@ -14,7 +14,7 @@ module.exports = ({isDev}) => {
     target: 'web',
     context: path.resolve(__dirname, '../src'),
     entry: {
-      vendor: [ifDev('react-hot-loader/patch'),ifDev('webpack-dev-server/client'),ifDev('webpack/hot/only-dev-server'), 'react-hot-loader','./appLibs'].filter(nullsOut),
+      vendor: [ifDev('react-hot-loader/patch'),ifDev('webpack-dev-server/client'),ifDev('webpack/hot/only-dev-server'), ifDev('react-hot-loader'), './appLibs'].filter(nullsOut),
       main: './appLoader',
     },
     output: {
@@ -63,16 +63,19 @@ module.exports = ({isDev}) => {
             path.resolve(__dirname,'../src'),
           ],
           use: isDev ? [
-            'style-loader',
-            { loader: 'css-loader',
-              options: {
-                modules: true,
-                importLoaders: 1,
-                localIdentName: '[path][name]__[local]--[hash:base64:5]'
-              }
-            },
-            'postcss-loader'
-          ] : ExtractTextPlugin.extract({loader: 'css-loader'}),
+              'style-loader',
+              { loader: 'css-loader',
+                options: {
+                  modules: true,
+                  importLoaders: 1,
+                  localIdentName: '[path][name]__[local]--[hash:base64:5]'
+                }
+              },
+              'postcss-loader'
+            ] : ExtractTextPlugin.extract({
+              fallbackLoader: 'style-loader',
+              loader: 'css-loader?modules&importLoaders=1!postcss-loader'
+            }),
 
         },
         {
