@@ -9,18 +9,24 @@ class Layout extends Component {
       <div className={style.appRoot}>
         <header className={style.headerLayout}>
           <div className={style.header}>
-            <a href="/" className="navigation__logo">
-              <img className="logo" src="/cd0bb358c45b584743d8ce4991777c42.svg" />
-            </a>
+            <div className={style.logoBox}>
+              <div className={style.logo}>
+                <a href="http://venacle.com">Venacle</a>
+              </div>
 
-            <nav className="navigation__links">
-              <a href="/concepts" className="navigation__link ">Concepts</a>
-              <a href="/guides"
-                                                                                                        className="navigation__link ">Guides</a><a
-              href="/configuration" className="navigation__link ">Documentation</a><a href="///opencollective.com/webpack"
-                                                                                  target="_blank"
-                                                                                  className="navigation__link ">Donate</a><a
-              href="///medium.com/webpack" target="_blank" className="navigation__link ">Blog</a></nav>
+              <div className={style.logoLine}>|</div>
+
+              <div className={style.logoDoc}>
+                <a >Doc</a>
+              </div>
+            </div>
+
+            <div className={style.navi}>
+              <div className={style.naviLink}>컨셉</div>
+              <div className={style.naviLink}>가이드</div>
+              <div className={style.naviLink}>문서</div>
+              <div className={style.naviLink}>검색</div>
+            </div>
           </div>
         </header>
 

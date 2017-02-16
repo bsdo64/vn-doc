@@ -1,11 +1,3 @@
-html {
-  height: 100%
-}
-
-body {
-  font-size: 12px;
-}
-
 .appRoot {
   display: flex;
   height: 100%;
@@ -15,7 +7,7 @@ body {
 
 .headerLayout {
   flex: none;
-  background: #2b2b2b;
+  background: #535353;
   color: #fff;
 
   .header {
@@ -23,7 +15,50 @@ body {
     margin: 0 auto;
     display: flex;
 
+    .logoBox {
+      flex: 1 1 auto;
+      justify-content: flex-start;
 
+      .logo {
+        float: left;
+        margin-top: 0.5em;
+
+        a {
+          color: #00EDC9;
+          font-size: 1.75em;
+          font-weight: 300;
+        }
+      }
+
+      .logoLine {
+        float: left;
+        margin-top: 1em;
+        padding: 0 5px;
+      }
+
+      .logoDoc {
+        float: left;
+        margin-top: 0.5em;
+
+        a {
+          color: #fff;
+          font-size: 1.75em;
+          font-weight: 300;
+        }
+      }
+    }
+
+    .navi {
+      flex: 0 0 auto;
+      justify-content: flex-end;
+      flex-direction: row;
+
+      .naviLink {
+        margin: 1em 0;
+        padding-right: 1em;
+        float: left;
+      }
+    }
   }
 }
 
