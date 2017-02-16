@@ -17,7 +17,7 @@ class Layout extends Component {
               <div className={style.logoLine}>|</div>
 
               <div className={style.logoDoc}>
-                <a >Doc</a>
+                <a href="/">Doc</a>
               </div>
             </div>
 

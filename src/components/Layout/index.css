@@ -5,59 +5,68 @@
   background: #eee;
 }
 
+
+:local(.emHeight) {
+  height: 3em;
+}
+
+
 .headerLayout {
   flex: none;
   background: #535353;
   color: #fff;
+}
 
-  .header {
-    width: 1024px;
-    margin: 0 auto;
-    display: flex;
 
-    .logoBox {
-      flex: 1 1 auto;
-      justify-content: flex-start;
+.header {
+  composes: emHeight;
+  width: 1024px;
+  margin: 0 auto;
+  display: flex;
 
-      .logo {
-        float: left;
-        margin-top: 0.5em;
 
-        a {
-          color: #00EDC9;
-          font-size: 1.75em;
-          font-weight: 300;
-        }
-      }
+  .logoBox {
+    flex: 1 1 auto;
+    justify-content: flex-start;
 
-      .logoLine {
-        float: left;
-        margin-top: 1em;
-        padding: 0 5px;
-      }
+    .logo {
+      float: left;
+      margin-top: 0.5em;
 
-      .logoDoc {
-        float: left;
-        margin-top: 0.5em;
-
-        a {
-          color: #fff;
-          font-size: 1.75em;
-          font-weight: 300;
-        }
+      a {
+        color: #00EDC9;
+        font-size: 1.75em;
+        font-weight: 300;
       }
     }
 
-    .navi {
-      flex: 0 0 auto;
-      justify-content: flex-end;
-      flex-direction: row;
+    .logoLine {
+      float: left;
+      margin-top: 1em;
+      padding: 0 5px;
+    }
 
-      .naviLink {
-        margin: 1em 0;
-        padding-right: 1em;
-        float: left;
+    .logoDoc {
+      float: left;
+      margin-top: 0.5em;
+
+      a {
+        color: #fff;
+        font-size: 1.75em;
+        font-weight: 300;
       }
+    }
+  }
+
+  .navi {
+    flex: 0 0 auto;
+    justify-content: flex-end;
+    flex-direction: row;
+
+    .naviLink {
+      margin: 1em 0;
+      padding-right: 1em;
+      float: left;
     }
   }
 }
@@ -82,10 +91,6 @@
   background: #edd
 }
 
-.emHeight {
-  height: 3em;
-}
-
-.header, .footer {
+.footer {
   composes: emHeight;
 }
